@@ -1,0 +1,56 @@
+ALGORITHM data linear
+VAR
+    set 1 : ARRAY_OF INTEGER[4] ;
+    set 2 : ARRAY_OF INTEGER[5] ;
+    i , j , sum : INTEGER ;
+BEGIN
+ set 1 := ARRAY_OF INTEGER[3, 1, 7, 9];
+ set 2  := ARRAY_OF INTEGER[2, 4, 1, 9, 3];
+ Htbl : HASH_TABLE <INTEGER ,INTEGER>
+
+ FOR i FROM 0 TO set.length 
+     do IF Htbl.lookup (set1[i]= true ) 
+     THEN
+         Htbl.get ( set1[i],count+1 )
+     ELSE
+         Htbl.insert (set1[i],1)
+     END_IF
+ END_FOR
+
+FOR i FROM 0 TO set.length 
+     do IF Htbl.lookup (set2[j]= true ) 
+     THEN
+         Htbl.get ( set2[j],count+1 )
+     ELSE
+         Htbl.insert (set2[j],1)
+     END_IF
+ END_FOR
+
+  tab = htbl.getKeys()
+  //[2,4,5,6,8]
+
+  s = 0 
+
+ for i from 0 to tab.length  do 
+
+ if(htbl.get(tab[0]) > 1) THEN
+
+
+ //htbl.get(key)  ===> return value
+ // tab[i]  =====> return key 
+
+
+  s = s + tab[0]*htbl.get(tab[0])
+
+
+END_IF
+
+END_FOR
+
+ write(s)  
+
+
+
+ END_IF
+
+END
